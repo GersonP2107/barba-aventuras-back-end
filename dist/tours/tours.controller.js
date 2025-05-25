@@ -38,11 +38,8 @@ let ToursController = class ToursController {
     remove(id) {
         return this.toursService.remove(id);
     }
-    uploadFile(file) {
-        return {
-            filename: file.filename,
-            url: `http://localhost:3001/uploads/tours/${file.filename}`,
-        };
+    uploadImage(file) {
+        return { filename: file.filename };
     }
 };
 exports.ToursController = ToursController;
@@ -97,7 +94,7 @@ __decorate([
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
-], ToursController.prototype, "uploadFile", null);
+], ToursController.prototype, "uploadImage", null);
 exports.ToursController = ToursController = __decorate([
     (0, common_1.Controller)('tours'),
     __metadata("design:paramtypes", [tours_service_1.ToursService])

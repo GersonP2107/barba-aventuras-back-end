@@ -66,11 +66,23 @@ let BlogService = class BlogService {
         return this.blogPostRepository.save(newBlogPost);
     }
     async update(id, blogPost) {
-        if (blogPost.title && !blogPost.slug) {
-            blogPost.slug = this.generateSlug(blogPost.title);
+        try {
+            if (blogPost.title && !blogPost.slug) {
+                blogPost.slug = this.generateSlug(blogPost.title);
+            }
+            if (blogPost.tags && typeof blogPost.tags === 'string') {
+                blogPost.tags = blogPost.tags
+                    .split(',')
+                    .map(tag => tag.trim())
+                    .filter(tag => tag !== '');
+            }
+            await this.blogPostRepository.update(id, blogPost);
+            return this.findById(id);
         }
-        await this.blogPostRepository.update(id, blogPost);
-        return this.findById(id);
+        catch (error) {
+            console.error('Error updating blog post:', error);
+            throw error;
+        }
     }
     async remove(id) {
         await this.blogPostRepository.delete(id);

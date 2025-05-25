@@ -8,7 +8,7 @@ export declare class BlogController {
     findRelated(slug: string, limit?: number): Promise<BlogPost[]>;
     findOne(id: string): Promise<BlogPost>;
     create(blogPost: Partial<BlogPost>): Promise<BlogPost>;
-    update(id: string, blogPost: Partial<BlogPost>): Promise<BlogPost>;
+    update(id: string, updateData: any): Promise<BlogPost>;
     remove(id: string): Promise<void>;
     uploadImage(file: any): {
         filename: any;

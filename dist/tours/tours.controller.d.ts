@@ -8,8 +8,7 @@ export declare class ToursController {
     create(tour: Partial<Tour>): Promise<Tour>;
     update(id: string, tour: Partial<Tour>): Promise<Tour>;
     remove(id: string): Promise<void>;
-    uploadFile(file: any): {
+    uploadImage(file: any): {
         filename: any;
-        url: string;
     };
 }

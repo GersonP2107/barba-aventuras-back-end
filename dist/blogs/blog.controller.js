@@ -38,8 +38,12 @@ let BlogController = class BlogController {
     create(blogPost) {
         return this.blogService.create(blogPost);
     }
-    update(id, blogPost) {
-        return this.blogService.update(id, blogPost);
+    update(id, updateData) {
+        const mappedData = {
+            ...updateData,
+            image: updateData.imageUrl || updateData.image,
+        };
+        return this.blogService.update(id, mappedData);
     }
     remove(id) {
         return this.blogService.remove(id);

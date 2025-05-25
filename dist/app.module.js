@@ -14,6 +14,8 @@ const activities_module_1 = require("./activities/activities.module");
 const tours_module_1 = require("./tours/tours.module");
 const blog_module_1 = require("./blogs/blog.module");
 const gallery_module_1 = require("./gallery/gallery.module");
+const products_module_1 = require("./products/products.module");
+const camino_costa_rica_module_1 = require("./camino_costa_rica/camino-costa-rica.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -36,6 +38,8 @@ exports.AppModule = AppModule = __decorate([
             tours_module_1.ToursModule,
             blog_module_1.BlogModule,
             gallery_module_1.GalleryModule,
+            products_module_1.ProductsModule,
+            camino_costa_rica_module_1.CaminoCostaRicaModule,
         ],
     })
 ], AppModule);
