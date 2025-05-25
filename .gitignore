@@ -1,0 +1,36 @@
+# Crear archivo .gitignore específico para NestJS
+echo "# Dependencias" > .gitignore
+echo "node_modules/" >> .gitignore
+echo ".pnpm-store/" >> .gitignore
+echo "dist/" >> .gitignore
+
+echo "\n# Variables de entorno" >> .gitignore
+echo ".env" >> .gitignore
+echo ".env.local" >> .gitignore
+echo ".env*.local" >> .gitignore
+
+echo "\n# Logs" >> .gitignore
+echo "*.log" >> .gitignore
+echo "logs/" >> .gitignore
+echo "npm-debug.log*" >> .gitignore
+echo "yarn-debug.log*" >> .gitignore
+echo "yarn-error.log*" >> .gitignore
+
+echo "\n# IDE" >> .gitignore
+echo ".vscode/" >> .gitignore
+echo ".idea/" >> .gitignore
+echo "*.suo" >> .gitignore
+echo "*.ntvs*" >> .gitignore
+echo "*.njsproj" >> .gitignore
+echo "*.sln" >> .gitignore
+echo "*.sw?" >> .gitignore
+
+echo "\n# Testing" >> .gitignore
+echo "coverage/" >> .gitignore
+echo "test-results/" >> .gitignore
+
+echo "\n# Misc" >> .gitignore
+echo ".DS_Store" >> .gitignore
+echo "*.tmp" >> .gitignore
+echo "*.bak" >> .gitignore
+echo "*.pid" >> .gitignore
