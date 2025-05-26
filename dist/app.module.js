@@ -16,6 +16,7 @@ const blog_module_1 = require("./blogs/blog.module");
 const gallery_module_1 = require("./gallery/gallery.module");
 const products_module_1 = require("./products/products.module");
 const camino_costa_rica_module_1 = require("./camino_costa_rica/camino-costa-rica.module");
+const hero_banner_module_1 = require("./hero-banner/hero-banner.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -40,6 +41,7 @@ exports.AppModule = AppModule = __decorate([
             gallery_module_1.GalleryModule,
             products_module_1.ProductsModule,
             camino_costa_rica_module_1.CaminoCostaRicaModule,
+            hero_banner_module_1.HeroBannerModule,
         ],
     })
 ], AppModule);

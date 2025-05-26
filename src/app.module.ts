@@ -7,6 +7,7 @@ import { BlogModule } from './blogs/blog.module';
 import { GalleryModule } from './gallery/gallery.module';
 import { ProductsModule } from './products/products.module';
 import { CaminoCostaRicaModule } from './camino_costa_rica/camino-costa-rica.module';
+import { HeroBannerModule } from './hero-banner/hero-banner.module';
 
 @Module({
   imports: [
@@ -28,6 +29,7 @@ import { CaminoCostaRicaModule } from './camino_costa_rica/camino-costa-rica.mod
     GalleryModule, // Make sure GalleryModule is here
     ProductsModule,
     CaminoCostaRicaModule,
+    HeroBannerModule,
   ],
 })
 export class AppModule {}
